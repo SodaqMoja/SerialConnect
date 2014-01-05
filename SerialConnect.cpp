@@ -20,7 +20,7 @@
 
 #include <stdint.h>
 #include <util/crc16.h>
-#include <Stream.h>
+#include <Arduino.h>
 #include "SerialConnect.h"
 
 
