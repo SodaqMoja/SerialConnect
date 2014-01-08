@@ -134,6 +134,16 @@ bool SerialConnect::waitUntilAvailable(uint16_t timeout)
 }
 
 /*
+ * Flush all available input and ignore it all.
+ */
+void SerialConnect::flushInput()
+{
+  while (_myStream->available() > 0) {
+    _myStream->read();
+  }
+}
+
+/*
  * Read a non-empty line from the input
  *
  * \param buffer pointer to store the result

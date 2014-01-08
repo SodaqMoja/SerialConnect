@@ -35,6 +35,8 @@ public:
   bool receiveData(const char *prefix, char *buffer, size_t size, uint16_t timeout=1000);
   bool waitUntilAvailable(uint16_t timeout=1000);
 
+  void flushInput();
+
   void setDiag(Stream &stream) { _diagStream = &stream; }
 
 private:
